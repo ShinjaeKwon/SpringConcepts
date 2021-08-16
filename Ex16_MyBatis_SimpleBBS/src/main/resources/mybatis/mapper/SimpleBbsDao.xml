@@ -13,13 +13,13 @@
 		select * from simple_bbs where id = #{param1}
 	</select>
 	
-	<insert id="writeDao">
-		insert into simpe_bbs(id,writer, title, content)
-			values (simple_bbs_seq.nextval, #{param1}, #{param2}, #{param3})
+	<insert id="writeDao" >
+		insert into simple_bbs(writer, title, content)
+			values (#{param1}, #{param2}, #{param3})
 	</insert>
 	
 	<delete id="deleteDao">
-		delete from simpe_bbs where id = #{param1}
+		delete from simple_bbs where id = #{param1}
 	</delete>
 		
 	
